@@ -12,6 +12,7 @@ stdin.on('data', (key) => {
     process.stdout.write('\x07')
   };
   if (Number(key) >= 1 && Number(key) <= 9 ) {
+    console.log(`\nsetting timer for ${key} seconds`)
     setTimeout(() => {
       process.stdout.write('\x07')
     }, Number(key) * 1000);
